@@ -1,7 +1,17 @@
-* {
+*,
+*::after,
+*::before {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
 }
 
 body {
@@ -12,27 +22,10 @@ body {
 
 .wrapper {
   display: flex;
-  justify-content: space-evenly;
   background: #ffffff;
   max-width: 1200px;
   margin: 0 auto;
   box-shadow: 5px 9px 20px rgba(0, 0, 0, 0.15);
-}
-@media (max-width: 1200px) {
-  .wrapper {
-    max-width: 970px;
-  }
-}
-@media (max-width: 992px) {
-  .wrapper {
-    max-width: 750px;
-  }
-}
-@media (max-width: 767px) {
-  .wrapper {
-    max-width: none;
-    flex-wrap: wrap;
-  }
 }
 
 .sidebar {
@@ -147,10 +140,12 @@ body {
   line-height: 24px;
   margin-bottom: 10px;
 }
+
 .projects-link {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 24px;
+  font-size: 16px;
+  text-decoration-skip-ink: none;
+  font-weight: 700;
+  line-height: 26px;
   color: #595959;
 }
 .tech-name {
@@ -160,14 +155,17 @@ body {
   line-height: 24px;
 }
 .dots {
-  color: #a8a8a8;
-  font-weight: 100;
+  flex-grow: 1;
+  border-bottom: 2px dotted #a8a8a8;
 }
 .projects-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
   font-weight: 700;
-  margin-left: 17px;
 }
 .projects-container {
+  padding-right: 50px;
   margin-bottom: 55px;
 }
 .profession-title {
